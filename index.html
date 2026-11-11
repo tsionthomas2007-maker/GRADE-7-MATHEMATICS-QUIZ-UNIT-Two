@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade 7 Mathematics — Unit 2: Integers Assessment</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans Ethiopic', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#0284c7',
+              700: '#1a365d',
+              800: '#0f274a',
+              900: '#0a192f'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', 'Noto Sans Ethiopic', sans-serif; }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background-color: #cbd5e1;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col antialiased selection:bg-sky-200">
+
+  <!-- TOP HEADER & BRANDING -->
+  <header class="bg-gradient-to-r from-brand-900 via-brand-700 to-sky-900 text-white shadow-lg sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-amber-400 text-brand-900 font-extrabold flex items-center justify-center text-lg shadow-md">
+          7
+        </div>
+        <div>
+          <h1 class="text-sm md:text-base font-bold tracking-wide text-white uppercase">Grade 7 Mathematics</h1>
+          <p class="text-xs text-sky-200 font-medium">Unit 2: Integers Assessment (50 Items)</p>
+        </div>
+      </div>
+      
+      <!-- Narrator Speech Controller -->
+      <div class="flex items-center space-x-2">
+        <button id="narratorBtn" onclick="toggleNarrator()" class="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-sky-800/80 hover:bg-sky-700 border border-sky-400/40 text-xs text-white transition-all shadow-sm">
+          <svg id="speakerIcon" class="w-4 h-4 text-amber-300" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 3.5a.75.75 0 01.75.75v11.5a.75.75 0 01-1.28.53L5.59 12H3a1 1 0 01-1-1V9a1 1 0 011-1h2.59l3.88-4.28A.75.75 0 0110 3.5zm3.536 2.464a.75.75 0 011.06 0 6 6 0 010 8.486.75.75 0 11-1.06-1.06 4.5 4.5 0 000-6.364.75.75 0 010-1.06z"/>
+          </svg>
+          <span id="speakerLabel" class="font-medium">Narrate (British Voice)</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="flex-1 max-w-5xl w-full mx-auto p-4 md:p-6 flex flex-col justify-center">
+
+    <!-- ==================== SCREEN 1: WELCOME & REGISTRATION ==================== -->
+    <section id="welcomeScreen" class="glass-card rounded-2xl shadow-xl border border-slate-200 p-6 md:p-10 transition-all">
+      <div class="text-center max-w-2xl mx-auto space-y-4">
+        <span class="inline-block px-3 py-1 bg-sky-100 text-sky-800 rounded-full text-xs font-semibold uppercase tracking-wider">
+          Official Unit Examination
+        </span>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-brand-900">
+          Integers Mastery & Auto-Graded Assessment
+        </h2>
+        <p class="text-sm md:text-base text-slate-600 leading-relaxed">
+          Welcome to the Grade 7 Mathematics Unit 2 test. This examination covers <span class="font-semibold text-brand-700">Whole & Natural Numbers, Set Relationships, Operations, Properties, and Parity</span>.
+        </p>
+
+        <!-- Instructions Box -->
+        <div class="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-xl text-left text-xs md:text-sm text-amber-900 space-y-1.5">
+          <p class="font-bold flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+            Exam Rules & Features:
+          </p>
+          <ul class="list-disc list-inside space-y-1 text-slate-700 ml-1">
+            <li><strong>Total Items:</strong> 50 (40 Multiple Choice, 5 Word Bank Fill-in-the-Blanks, 5 True/False).</li>
+            <li><strong>Instant Feedback & Lock:</strong> Once an answer is selected, it is <em>irreversible</em>. Immediate color feedback & detailed English/Amharic explanations will appear.</li>
+            <li><strong>Audio Narration:</strong> A dedicated British English narrator is integrated to read out questions and feedback.</li>
+            <li><strong>Official Submission:</strong> Upon completion, your score will be computed and can be transmitted directly to teacher email <strong>mesayferedegn2@gmail.com</strong>.</li>
+          </ul>
+        </div>
+
+        <!-- Student Identification Form -->
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 md:p-6 text-left space-y-4 max-w-lg mx-auto shadow-inner">
+          <h3 class="text-sm font-bold text-brand-900 uppercase tracking-wider flex items-center gap-2">
+            <svg class="w-4 h-4 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+            Student Identification
+          </h3>
+          <div>
+            <label for="studentName" class="block text-xs font-semibold text-slate-700 mb-1">Full Name (የተማሪ ሙሉ ስም) <span class="text-red-500">*</span></label>
+            <input type="text" id="studentName" placeholder="e.g. Almaz Bekele Tadesse" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm">
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label for="studentId" class="block text-xs font-semibold text-slate-700 mb-1">Student ID / Roll No <span class="text-red-500">*</span></label>
+              <input type="text" id="studentId" placeholder="e.g. G7-042" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm">
+            </div>
+            <div>
+              <label for="studentSection" class="block text-xs font-semibold text-slate-700 mb-1">Section</label>
+              <input type="text" id="studentSection" placeholder="e.g. 7A" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm">
+            </div>
+          </div>
+          <p id="regError" class="text-red-600 text-xs font-medium hidden">Please fill in both Full Name and Student ID before starting.</p>
+        </div>
+
+        <!-- Start Button -->
+        <div class="pt-2">
+          <button onclick="startQuiz()" class="inline-flex items-center justify-center space-x-2 px-8 py-3.5 bg-brand-700 hover:bg-brand-800 active:scale-95 text-white font-bold rounded-xl shadow-lg transition-all text-base w-full sm:w-auto">
+            <span>Begin Assessment</span>
+            <svg class="w-5 h-5 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SCREEN 2: ACTIVE QUIZ VIEW ==================== -->
+    <section id="quizScreen" class="hidden flex-col space-y-4">
+
+      <!-- Quiz Top Bar: Progress & Status -->
+      <div class="glass-card rounded-xl p-4 shadow-sm border border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-3">
+        <div class="flex items-center space-x-3">
+          <div class="w-9 h-9 rounded-lg bg-sky-100 text-sky-800 font-bold flex items-center justify-center text-sm" id="badgeSection">
+            MCQ
+          </div>
+          <div>
+            <div class="text-xs text-slate-500 font-medium">Question <span id="currentQNum" class="font-bold text-slate-900">1</span> of 50</div>
+            <div id="studentDisplay" class="text-xs font-semibold text-brand-700 truncate max-w-xs">Student: Almaz Bekele</div>
+          </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="flex-1 max-w-md mx-2">
+          <div class="flex justify-between text-[11px] font-semibold text-slate-500 mb-1">
+            <span>Exam Progress</span>
+            <span id="progressPercent">0%</span>
+          </div>
+          <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
+            <div id="progressBar" class="bg-gradient-to-r from-sky-500 to-brand-700 h-2.5 rounded-full transition-all duration-300" style="width: 2%"></div>
+          </div>
+        </div>
+
+        <!-- Current Score live counter -->
+        <div class="flex items-center space-x-2 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">
+          <span class="text-xs text-slate-500 font-medium">Score:</span>
+          <span id="liveScore" class="text-sm font-bold text-emerald-700">0</span>
+          <span class="text-xs text-slate-400">/ 50</span>
+        </div>
+      </div>
+
+      <!-- Quick Question Jump Drawer (Horizontal scroll) -->
+      <div class="bg-white rounded-xl p-3 border border-slate-200 shadow-sm overflow-x-auto custom-scrollbar">
+        <div class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-2 flex items-center justify-between">
+          <span>Question Grid Quick Navigation:</span>
+          <span class="text-[10px] text-slate-400 font-normal">Green = Correct | Red = Incorrect | Gray = Current/Pending</span>
+        </div>
+        <div id="questionGrid" class="flex space-x-1.5 min-w-max pb-1">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Main Question Card -->
+      <div class="glass-card rounded-2xl p-5 md:p-8 shadow-md border border-slate-200 flex flex-col space-y-5">
+        
+        <!-- Category & Part Tag -->
+        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+          <span id="partTitleTag" class="px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wide bg-blue-50 text-blue-700">
+            PART I: MULTIPLE CHOICE
+          </span>
+          <button onclick="readCurrentQuestionSpeech()" title="Re-read this question" class="flex items-center space-x-1 text-xs text-sky-600 hover:text-sky-800 font-medium">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 3.5a.75.75 0 01.75.75v11.5a.75.75 0 01-1.28.53L5.59 12H3a1 1 0 01-1-1V9a1 1 0 011-1h2.59l3.88-4.28A.75.75 0 0110 3.5zm3.536 2.464a.75.75 0 011.06 0 6 6 0 010 8.486.75.75 0 11-1.06-1.06 4.5 4.5 0 000-6.364.75.75 0 010-1.06z"/></svg>
+            <span>Listen Voice</span>
+          </button>
+        </div>
+
+        <!-- Question Stem -->
+        <div class="space-y-2">
+          <h3 id="questionStem" class="text-base md:text-lg font-bold text-slate-900 leading-snug">
+            Question text goes here
+          </h3>
+          <p id="questionContext" class="text-xs text-slate-500 italic hidden"></p>
+        </div>
+
+        <!-- Interactive Options Container (Dynamic: Radio, Word Bank Match Buttons, or True/False) -->
+        <div id="optionsContainer" class="space-y-2.5 pt-1">
+          <!-- Filled dynamically -->
+        </div>
+
+        <!-- Instant Feedback & Bilingual Explanations Container -->
+        <div id="feedbackBox" class="hidden rounded-xl p-4 md:p-5 border transition-all text-xs md:text-sm space-y-3">
+          <div class="flex items-center justify-between font-bold">
+            <div id="feedbackResultTitle" class="flex items-center space-x-2">
+              <!-- Result Icon & Status -->
+            </div>
+            <span id="feedbackPoints" class="px-2 py-0.5 rounded text-xs"></span>
+          </div>
+
+          <!-- Bilingual Detailed Explanations -->
+          <div class="bg-white/80 rounded-lg p-3 space-y-2 border border-slate-200/60 shadow-xs">
+            <div>
+              <p class="font-bold text-slate-800 flex items-center gap-1.5 text-xs uppercase tracking-wider text-sky-800">
+                <span>🇬🇧 English Detailed Solution:</span>
+              </p>
+              <p id="explanationEn" class="text-slate-700 leading-relaxed mt-0.5 text-xs md:text-sm"></p>
+            </div>
+            <div class="border-t border-slate-200/60 pt-2">
+              <p class="font-bold text-slate-800 flex items-center gap-1.5 text-xs uppercase tracking-wider text-emerald-800">
+                <span>🇪🇹 ማብራሪያ (Amharic Explanation):</span>
+              </p>
+              <p id="explanationAm" class="text-slate-800 leading-relaxed font-sans mt-0.5 text-xs md:text-sm"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons: Back, Skip/Jump, Next, Submit -->
+        <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-slate-100">
+          <button id="prevBtn" onclick="navigatePrev()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold text-xs md:text-sm rounded-lg transition-all flex items-center space-x-1.5 disabled:opacity-40 disabled:cursor-not-allowed">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span>Back</span>
+          </button>
+
+          <div class="flex items-center space-x-2">
+            <button id="skipBtn" onclick="navigateNext()" class="px-4 py-2 border border-slate-300 hover:bg-slate-100 text-slate-600 font-medium text-xs md:text-sm rounded-lg transition-all">
+              Skip / Jump Next
+            </button>
+            <button id="nextBtn" onclick="navigateNext()" class="px-5 py-2 bg-brand-700 hover:bg-brand-800 text-white font-semibold text-xs md:text-sm rounded-lg shadow-md transition-all flex items-center space-x-1.5">
+              <span>Next</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+            <button id="submitExamBtn" onclick="confirmSubmitExam()" class="px-6 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs md:text-sm rounded-lg shadow-md transition-all flex items-center space-x-1.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Submit Exam</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SCREEN 3: RESULTS & TEACHER DASHBOARD ==================== -->
+    <section id="resultsScreen" class="hidden flex-col space-y-6">
+      
+      <!-- Performance Summary Card -->
+      <div class="glass-card rounded-2xl p-6 md:p-8 shadow-xl border border-slate-200 text-center space-y-5">
+        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 shadow-inner">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Assessment Report</span>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-brand-900 mt-1" id="resStudentTitle">Student Name</h2>
+          <p class="text-xs text-slate-500 mt-0.5" id="resStudentSub">ID: G7-001 | Date: Current</p>
+        </div>
+
+        <!-- Grade Display Banner -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto">
+          <div class="bg-sky-50 border border-sky-100 rounded-xl p-3">
+            <div class="text-[11px] font-semibold text-sky-800">Total Score</div>
+            <div class="text-2xl font-black text-sky-900" id="resScoreNum">0 / 50</div>
+          </div>
+          <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-3">
+            <div class="text-[11px] font-semibold text-indigo-800">Percentage</div>
+            <div class="text-2xl font-black text-indigo-900" id="resPercent">0%</div>
+          </div>
+          <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-3">
+            <div class="text-[11px] font-semibold text-emerald-800">Correct Items</div>
+            <div class="text-2xl font-black text-emerald-900" id="resCorrectCount">0</div>
+          </div>
+          <div class="bg-amber-50 border border-amber-100 rounded-xl p-3">
+            <div class="text-[11px] font-semibold text-amber-800">Status</div>
+            <div class="text-xl font-black text-amber-900" id="resProficiency">Proficient</div>
+          </div>
+        </div>
+
+        <!-- Email Action Card -->
+        <div class="bg-gradient-to-r from-brand-900 to-sky-900 rounded-xl p-5 text-white max-w-xl mx-auto shadow-md space-y-3 text-left">
+          <div class="flex items-start space-x-3">
+            <div class="p-2 bg-amber-400 text-brand-900 rounded-lg mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white">Direct Teacher Email Notification</h4>
+              <p class="text-xs text-sky-200">Transmit this verified assessment score breakdown directly to the teacher's mailbox:</p>
+              <p class="text-xs font-mono font-bold text-amber-300 mt-0.5">mesayferedegn2@gmail.com</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <button onclick="sendScoreEmail()" class="px-4 py-2 bg-amber-400 hover:bg-amber-300 text-brand-900 font-bold rounded-lg text-xs transition-all shadow flex items-center space-x-1.5">
+              <span>Send Score via Email Client</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </button>
+            <button onclick="copyScoreReport()" class="px-3.5 py-2 bg-sky-800 hover:bg-sky-700 text-white font-medium rounded-lg text-xs transition-all border border-sky-600 flex items-center space-x-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+              <span id="copyBtnText">Copy Report Text</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Retake & Review buttons -->
+        <div class="flex items-center justify-center space-x-3 pt-2">
+          <button onclick="reviewAllAnswers()" class="px-5 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs md:text-sm font-semibold rounded-lg transition-all">
+            Review All Answers
+          </button>
+          <button onclick="location.reload()" class="px-5 py-2.5 bg-brand-700 hover:bg-brand-800 text-white text-xs md:text-sm font-bold rounded-lg transition-all shadow">
+            Take Test Again
+          </button>
+        </div>
+      </div>
+
+      <!-- Instructor / Student Itemized Audit Table -->
+      <div class="glass-card rounded-2xl p-5 md:p-6 shadow-md border border-slate-200">
+        <div class="flex items-center justify-between mb-4 border-b border-slate-100 pb-3">
+          <h3 class="text-sm font-bold text-slate-800 uppercase tracking-wider flex items-center gap-2">
+            <span>Teacher Verification & Specification Ledger</span>
+          </h3>
+          <span class="text-xs text-slate-500 font-medium">All 50 Items Processed</span>
+        </div>
+        
+        <div class="overflow-x-auto max-h-96 custom-scrollbar border border-slate-200 rounded-xl">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-100 text-slate-600 font-semibold sticky top-0 border-b border-slate-200">
+              <tr>
+                <th class="p-2.5 w-12 text-center">#</th>
+                <th class="p-2.5 w-24">Type</th>
+                <th class="p-2.5">Question Summary</th>
+                <th class="p-2.5 w-24 text-center">Your Answer</th>
+                <th class="p-2.5 w-24 text-center">Correct Key</th>
+                <th class="p-2.5 w-20 text-center">Status</th>
+              </tr>
+            </thead>
+            <tbody id="auditTableBody" class="divide-y divide-slate-100 bg-white">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 py-3 text-center text-xs text-slate-500 mt-auto">
+    <p>Ethiopian Curriculum Grade 7 Mathematics &bull; Unit 2: Integers Assessment Platform &bull; Teacher Portal Email: mesayferedegn2@gmail.com</p>
+  </footer>
+
+  <!-- ==================== SCRIPT: DATA & APPLICATION LOGIC ==================== -->
+  <script>
+    /* Assessment Item Bank (Comprehensive: 40 MCQs, 5 Word Bank Match, 5 True/False) */
+    const quizData = [
+      // 1-10
+      {
+        id: 1, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "Which of the following numbers belongs to the set of natural numbers (ℕ)?",
+        options: [
+          { key: "A", text: "0" },
+          { key: "B", text: "15" },
+          { key: "C", text: "-7" },
+          { key: "D", text: "3.5" }
+        ],
+        correct: "B",
+        en: "Natural numbers are the positive counting numbers denoted by ℕ = {1, 2, 3, ...}. Therefore, 15 is a natural number. 0 is a whole number but not natural; -7 is a negative integer; and 3.5 is a decimal.",
+        am: "የተፈጥሮ ቁጥሮች (Natural numbers) የሚባሉት ከ 1 ጀምሮ ወደላይ የሚቆጠሩት ናቸው፡ ℕ = {1, 2, 3, ...}። ስለዚህ 15 የተፈጥሮ ቁጥር ነው። 0 የሙሉ ቁጥር (Whole number) እንጂ የተፈጥሮ ቁጥር አይደለም፤ -7 አሉታዊ ኢንቲጀር ነው፤ 3.5 ደግሞ አስርዮሽ ነው።"
+      },
+      {
+        id: 2, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "What is the smallest whole number (𝕎)?",
+        options: [
+          { key: "A", text: "-1" },
+          { key: "B", text: "1" },
+          { key: "C", text: "There is no smallest" },
+          { key: "D", text: "0" }
+        ],
+        correct: "D",
+        en: "The set of whole numbers is defined as 𝕎 = {0, 1, 2, 3, ...}. It contains all natural numbers along with 0. The smallest member is 0.",
+        am: "የሙሉ ቁጥሮች ስብስብ (Whole numbers) የሚገለጸው 𝕎 = {0, 1, 2, 3, ...} ተብሎ ነው። ትንሹ የሙሉ ቁጥር አባል 0 (ዜሮ) ነው።"
+      },
+      {
+        id: 3, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "Which of the following statements correctly expresses the set relationship between Natural numbers (ℕ), Whole numbers (𝕎), and Integers (ℤ)?",
+        options: [
+          { key: "A", text: "ℕ ⊂ 𝕎 ⊂ ℤ" },
+          { key: "B", text: "ℤ ⊂ 𝕎 ⊂ ℕ" },
+          { key: "C", text: "𝕎 ⊂ ℕ ⊂ ℤ" },
+          { key: "D", text: "ℕ ⊂ ℤ ⊂ 𝕎" }
+        ],
+        correct: "A",
+        en: "Every natural number is a whole number, and every whole number is an integer. Thus, the proper subset relation is ℕ ⊂ 𝕎 ⊂ ℤ.",
+        am: "ማንኛውም የተፈጥሮ ቁጥር ሙሉ ቁጥር ነው፤ ማንኛውም ሙሉ ቁጥር ደግሞ ኢንቲጀር ነው። ስለሆነም ትክክለኛው የንዑስ ስብስብ ዝምድና ℕ ⊂ 𝕎 ⊂ ℤ ነው።"
+      },
+      {
+        id: 4, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "Which of the following numbers is an integer?",
+        options: [
+          { key: "A", text: "2/5" },
+          { key: "B", text: "4.75" },
+          { key: "C", text: "-455" },
+          { key: "D", text: "1 1/3" }
+        ],
+        correct: "C",
+        en: "Integers include whole numbers and their negative opposites: ℤ = {..., -2, -1, 0, 1, 2, ...}. Fractions and decimals are not integers, so -455 is the integer.",
+        am: "ኢንቲጀሮች ሙሉ ቁጥሮችን እና አሉታዊ አቻዎቻቸውን ያጠቃልላሉ። ክፍልፋዮችና አስርዮሾች ኢንቲጀር አይደሉም። ስለዚህ -455 ኢንቲጀር ነው።"
+      },
+      {
+        id: 5, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "In real-life applications, which situation is correctly represented by the integer -100?",
+        options: [
+          { key: "A", text: "A temperature rise of 100°C" },
+          { key: "B", text: "A financial loss of 100 Birr" },
+          { key: "C", text: "Walking 100 meters forward" },
+          { key: "D", text: "A profit of 100 Birr" }
+        ],
+        correct: "B",
+        en: "Negative integers describe situations involving loss, below zero, descending, or deficit. A loss of 100 Birr is represented by -100.",
+        am: "በእውነተኛ ህይወት አሉታዊ ኢንቲጀር ኪሳራን፣ ከዜሮ በታች ዝቅታን ወይም ወደ ኋላ መጓዝን ይወክላል። ስለዚህ የ 100 ብር ኪሳራ በ -100 ይገለጻል።"
+      },
+      {
+        id: 6, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "Which of the following is an integer that is neither positive nor negative?",
+        options: [
+          { key: "A", text: "1" },
+          { key: "B", text: "-1" },
+          { key: "C", text: "None exists" },
+          { key: "D", text: "0" }
+        ],
+        correct: "D",
+        en: "Zero (0) is a neutral integer. It is greater than all negative integers and less than all positive integers, being neither positive nor negative.",
+        am: "ዜሮ (0) አዎንታዊም ሆነ አሉታዊ ያልሆነ ገለልተኛ ኢንቲጀር ነው።"
+      },
+      {
+        id: 7, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "What is the opposite (additive inverse) of -170?",
+        options: [
+          { key: "A", text: "-170" },
+          { key: "B", text: "0" },
+          { key: "C", text: "170" },
+          { key: "D", text: "1/170" }
+        ],
+        correct: "C",
+        en: "The opposite of an integer 'a' is '-a', located at the same distance from zero in the reverse direction. For -170, -(-170) = 170.",
+        am: "ተቃራኒ ቁጥር (Additive inverse) ከዜሮ እኩል ርቀት ላይ በተቃራኒ አቅጣጫ የሚገኝ ነው። የ -170 ተቃራኒ 170 ነው።"
+      },
+      {
+        id: 8, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "On a horizontal number line, where are all negative integers located relative to 0?",
+        options: [
+          { key: "A", text: "To the left of 0" },
+          { key: "B", text: "To the right of 0" },
+          { key: "C", text: "Directly on 0" },
+          { key: "D", text: "Above 0" }
+        ],
+        correct: "A",
+        en: "On a standard horizontal number line, negative integers (ℤ⁻) always lie to the left of 0, while positive integers (ℤ⁺) lie to the right.",
+        am: "በአግድም የቁጥር መስመር ላይ ሁሉም አሉታዊ ኢንቲጀሮች ከ 0 በስተግራ በኩል ይገኛሉ።"
+      },
+      {
+        id: 9, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "Which of the following comparison statements is TRUE?",
+        options: [
+          { key: "A", text: "-4 > 0" },
+          { key: "B", text: "-94 > -100" },
+          { key: "C", text: "-250 > -180" },
+          { key: "D", text: "0 < -15" }
+        ],
+        correct: "B",
+        en: "-94 lies to the right of -100 on the number line; hence -94 is greater than -100 (-94 > -100).",
+        am: "በቁጥር መስመር ላይ -94 ከ -100 በስተቀኝ ስለሚገኝ -94 > -100 የሚለው ንጽጽር እውነት ነው።"
+      },
+      {
+        id: 10, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "Which of the following is the greatest negative integer?",
+        options: [
+          { key: "A", text: "-100" },
+          { key: "B", text: "-10" },
+          { key: "C", text: "0" },
+          { key: "D", text: "-1" }
+        ],
+        correct: "D",
+        en: "-1 is the largest negative integer because it is situated closest to 0 from the left. Note that 0 is not negative.",
+        am: "ትልቁ አሉታዊ ኢንቲጀር -1 ነው። 0 አሉታዊ አይደለም፤ ወደ ግራ ሲኬድ ቁጥሮች እያነሱ ስለሚሄዱ -1 ከሁሉም አሉታዊያን ይበልጣል።"
+      },
+      // 11-20
+      {
+        id: 11, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "What is the successor of -99?",
+        options: [
+          { key: "A", text: "-98" },
+          { key: "B", text: "-100" },
+          { key: "C", text: "98" },
+          { key: "D", text: "100" }
+        ],
+        correct: "A",
+        en: "The successor of an integer n is the number immediately to its right (n + 1). -99 + 1 = -98.",
+        am: "የአንድ ኢንቲጀር ተከታይ (Successor) ማለት በስተቀኝ የሚከተለው ወይም 1 ሲደመርበት የሚገኘው ነው፡ -99 + 1 = -98።"
+      },
+      {
+        id: 12, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "What is the predecessor of 0?",
+        options: [
+          { key: "A", text: "1" },
+          { key: "B", text: "0" },
+          { key: "C", text: "-1" },
+          { key: "D", text: "None" }
+        ],
+        correct: "C",
+        en: "The predecessor of an integer n is the number immediately before it (n - 1). For 0, 0 - 1 = -1.",
+        am: "የአንድ ኢንቲጀር ቀዳሚ (Predecessor) ማለት ከቁጥሩ በፊት የሚመጣው ወይም 1 ሲቀነስበት የሚገኘው ነው፡ 0 - 1 = -1።"
+      },
+      {
+        id: 13, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "Which list of integers is arranged in descending order (from largest to smallest)?",
+        options: [
+          { key: "A", text: "-40, -12, -8, 0, 10" },
+          { key: "B", text: "-100, -65, -12, -1, 0" },
+          { key: "C", text: "10, 0, -8, -40, -12" },
+          { key: "D", text: "55, 15, 0, -35, -75" }
+        ],
+        correct: "D",
+        en: "Descending order requires sequence from greatest to smallest: 55 > 15 > 0 > -35 > -75.",
+        am: "ቅደም ተከተል ከትልቅ ወደ ትንሽ (Descending order) ሲደረደር 55 > 15 > 0 > -35 > -75 ትክክለኛው ነው።"
+      },
+      {
+        id: 14, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "How many integers lie strictly between -4 and 2 on the number line?",
+        options: [
+          { key: "A", text: "4" },
+          { key: "B", text: "5" },
+          { key: "C", text: "6" },
+          { key: "D", text: "7" }
+        ],
+        correct: "B",
+        en: "The integers strictly between -4 and 2 are -3, -2, -1, 0, and 1. Counting them gives exactly 5 integers.",
+        am: "በ -4 እና 2 መካከል በጥብቅ የሚገኙት ኢንቲጀሮች -3, -2, -1, 0, 1 ሲሆኑ ድምራቸው 5 ኢንቲጀሮች ናቸው።"
+      },
+      {
+        id: 15, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "What is the sum of -36 and -40: (-36) + (-40)?",
+        options: [
+          { key: "A", text: "-76" },
+          { key: "B", text: "76" },
+          { key: "C", text: "-4" },
+          { key: "D", text: "4" }
+        ],
+        correct: "A",
+        en: "When adding two negative integers, add their magnitudes and attach the negative sign: -(36 + 40) = -76.",
+        am: "ሁለት አሉታዊ ኢንቲጀሮችን ስንደምር መጠናቸውን ደምረን አሉታዊ ምልክት እንሰጠዋለን፡ -(36 + 40) = -76።"
+      },
+      {
+        id: 16, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "What is the result of 22 + (-43)?",
+        options: [
+          { key: "A", text: "65" },
+          { key: "B", text: "21" },
+          { key: "C", text: "-21" },
+          { key: "D", text: "-65" }
+        ],
+        correct: "C",
+        en: "For integers with different signs, take the sign of the larger magnitude (43 is negative) and subtract: -(43 - 22) = -21.",
+        am: "የተለያየ ምልክት ያላቸውን ቁጥሮች ስንደምር የትልቁን ምልክት ወስደን እንቀንሳለን፡ -(43 - 22) = -21።"
+      },
+      {
+        id: 17, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "What is the sum of any two opposite integers, x + (-x)?",
+        options: [
+          { key: "A", text: "x" },
+          { key: "B", text: "0" },
+          { key: "C", text: "2x" },
+          { key: "D", text: "1" }
+        ],
+        correct: "B",
+        en: "By the property of opposites (additive inverse), adding any integer to its opposite always yields 0: x + (-x) = 0.",
+        am: "የተቃራኒ ቁጥሮች ድምር ሁልጊዜ ዜሮ (0) ነው፡ x + (-x) = 0።"
+      },
+      {
+        id: 18, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "Which mathematical property is illustrated by: (-3) + 5 = 5 + (-3)?",
+        options: [
+          { key: "A", text: "Associative property of addition" },
+          { key: "B", text: "Distributive property" },
+          { key: "C", text: "Additive identity property" },
+          { key: "D", text: "Commutative property of addition" }
+        ],
+        correct: "D",
+        en: "The commutative property of addition states that changing the order of the addends does not change the sum: a + b = b + a.",
+        am: "የመቀያየር ባህሪ (Commutative property) የመደመሪያ ቅደም ተከተል መቀያየር ድምሩን እንደማይለውጠው ያሳያል፡ a + b = b + a።"
+      },
+      {
+        id: 19, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "A submarine at 21 m below sea level suddenly moves up 6 m. At what depth is the submarine located now?",
+        options: [
+          { key: "A", text: "15 m below sea level" },
+          { key: "B", text: "27 m below sea level" },
+          { key: "C", text: "6 m below sea level" },
+          { key: "D", text: "21 m below sea level" }
+        ],
+        correct: "A",
+        en: "Starting depth is -21 m. Moving up 6 m corresponds to +6 m. -21 + 6 = -15 m, meaning 15 m below sea level.",
+        am: "ከባህር ጠለል በታች 21 ሜትር (-21) የነበረ ሰርጓጅ መርከብ 6 ሜትር ወደ ላይ (+6) ሲወጣ፡ -21 + 6 = -15 ሜትር (ከባህር ጠለል በታች 15 ሜትር) ይሆናል።"
+      },
+      {
+        id: 20, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "What is the difference 4 - 7 expressed as an equivalent addition expression?",
+        options: [
+          { key: "A", text: "4 + 7" },
+          { key: "B", text: "7 + (-4)" },
+          { key: "C", text: "4 + (-7)" },
+          { key: "D", text: "-4 + (-7)" }
+        ],
+        correct: "C",
+        en: "Subtracting an integer b from a is equivalent to adding the opposite of b: a - b = a + (-b). Thus, 4 - 7 = 4 + (-7).",
+        am: "ኢንቲጀርን መቀነስ ማለት የተቃራኒውን ድምር መደመር ማለት ነው፡ a - b = a + (-b)። ስለዚህ 4 - 7 = 4 + (-7) ነው።"
+      },
+      // 21-30
+      {
+        id: 21, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "Calculate the difference: -12 - (-18)",
+        options: [
+          { key: "A", text: "-30" },
+          { key: "B", text: "6" },
+          { key: "C", text: "-6" },
+          { key: "D", text: "30" }
+        ],
+        correct: "B",
+        en: "-12 - (-18) = -12 + 18 = +(18 - 12) = 6.",
+        am: "አሉታዊ ቁጥር መቀነስ ማለት አዎንታዊውን መደመር ነው፡ -12 - (-18) = -12 + 18 = 6።"
+      },
+      {
+        id: 22, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "Calculate the difference: -248 - 125",
+        options: [
+          { key: "A", text: "-123" },
+          { key: "B", text: "373" },
+          { key: "C", text: "123" },
+          { key: "D", text: "-373" }
+        ],
+        correct: "D",
+        en: "-248 - 125 = -248 + (-125) = -(248 + 125) = -373.",
+        am: "-248 - 125 ማለት -248 + (-125) ሲሆን ሁለቱም አሉታዊ ስለሆኑ ተደምረው -373 ይሰጣሉ።"
+      },
+      {
+        id: 23, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "The melting point of dry ice is -109°F and its boiling point is 109°F. How many degrees is the boiling point above the melting point?",
+        options: [
+          { key: "A", text: "218°F" },
+          { key: "B", text: "0°F" },
+          { key: "C", text: "109°F" },
+          { key: "D", text: "-218°F" }
+        ],
+        correct: "A",
+        en: "Difference = Boiling Point - Melting Point = 109 - (-109) = 109 + 109 = 218°F.",
+        am: "ልዩነቱ = 109 - (-109) = 109 + 109 = 218°F ይሆናል።"
+      },
+      {
+        id: 24, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "What is the product of 4 × (-5)?",
+        options: [
+          { key: "A", text: "20" },
+          { key: "B", text: "-1" },
+          { key: "C", text: "-20" },
+          { key: "D", text: "9" }
+        ],
+        correct: "C",
+        en: "The product of a positive integer and a negative integer is always negative: 4 × (-5) = -20.",
+        am: "አዎንታዊ ኢንቲጀር በአሉታዊ ሲባዛ ውጤቱ ሁልጊዜ አሉታዊ ነው፡ 4 × (-5) = -20።"
+      },
+      {
+        id: 25, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "What is the product of two negative integers: (-6) × (-13)?",
+        options: [
+          { key: "A", text: "78" },
+          { key: "B", text: "-78" },
+          { key: "C", text: "19" },
+          { key: "D", text: "-19" }
+        ],
+        correct: "A",
+        en: "The product of two negative integers is always a positive integer: (-6) × (-13) = +78.",
+        am: "ሁለት አሉታዊ ኢንቲጀሮች ሲባዙ ውጤቱ አዎንታዊ ኢንቲጀር ይሆናል፡ (-6) × (-13) = +78።"
+      },
+      {
+        id: 26, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "What is the value of: -122 × 0?",
+        options: [
+          { key: "A", text: "-122" },
+          { key: "B", text: "0" },
+          { key: "C", text: "1" },
+          { key: "D", text: "122" }
+        ],
+        correct: "B",
+        en: "By the multiplication property of zero, any integer multiplied by 0 is equal to 0: a × 0 = 0.",
+        am: "የዜሮ የማባዛት ባህሪ፡ ማንኛውም ኢንቲጀር በ 0 ሲባዛ ውጤቱ 0 ይሆናል፡ -122 × 0 = 0።"
+      },
+      {
+        id: 27, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "Which property of multiplication is illustrated by: -2 × (5 × 6) = (-2 × 5) × 6?",
+        options: [
+          { key: "A", text: "Commutative property" },
+          { key: "B", text: "Distributive property" },
+          { key: "C", text: "Multiplicative identity" },
+          { key: "D", text: "Associative property" }
+        ],
+        correct: "D",
+        en: "The associative property of multiplication states that grouping does not affect the product: a × (b × c) = (a × b) × c.",
+        am: "የማባዛት የአሶሼቲቭ (የማጣመር) ባህሪ፡ የቁጥሮች አሰባሰብ ውጤቱን እንደማይለውጠው ያሳያል፡ a × (b × c) = (a × b) × c።"
+      },
+      {
+        id: 28, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "Use the distributive property to find the value of: -6 × (5 + 3)",
+        options: [
+          { key: "A", text: "48" },
+          { key: "B", text: "-18" },
+          { key: "C", text: "-48" },
+          { key: "D", text: "-30" }
+        ],
+        correct: "C",
+        en: "By distributive property: (-6 × 5) + (-6 × 3) = -30 + (-18) = -48.",
+        am: "የማከፋፈል ባህሪ (Distributive property): (-6 × 5) + (-6 × 3) = -30 + (-18) = -48።"
+      },
+      {
+        id: 29, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "What is the sign of the product: (-1) × (-2) × (-3) × (-4) × (-5)?",
+        options: [
+          { key: "A", text: "Negative" },
+          { key: "B", text: "Positive" },
+          { key: "C", text: "Zero" },
+          { key: "D", text: "Cannot be determined" }
+        ],
+        correct: "A",
+        en: "There are 5 negative factors. The product of an odd number of negative factors is always negative.",
+        am: "እዚህ ጋር 5 (ጎዶሎ ቁጥር ያላቸው) አሉታዊ ቁጥሮች ተባዝተዋል። የጎዶሎ ቁጥር አሉታዊ ተባዢዎች ውጤት ሁልጊዜ አሉታዊ (Negative) ነው።"
+      },
+      {
+        id: 30, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "Evaluate the product: (-3) × 5 × (-4)",
+        options: [
+          { key: "A", text: "-60" },
+          { key: "B", text: "60" },
+          { key: "C", text: "-12" },
+          { key: "D", text: "23" }
+        ],
+        correct: "B",
+        en: "There are two negative factors (an even number), so the product is positive: (-3 × 5) × (-4) = -15 × (-4) = 60.",
+        am: "ሁለት አሉታዊ ቁጥሮች (ተጋማሽ ብዛት) ስላሉ ውጤቱ አዎንታዊ ነው፡ -15 × (-4) = 60።"
+      },
+      // 31-40
+      {
+        id: 31, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "What is the quotient of: -368 ÷ 8?",
+        options: [
+          { key: "A", text: "46" },
+          { key: "B", text: "-42" },
+          { key: "C", text: "42" },
+          { key: "D", text: "-46" }
+        ],
+        correct: "D",
+        en: "When dividing integers with opposite signs, the quotient is negative: -(368 ÷ 8) = -46.",
+        am: "አሉታዊ ኢንቲጀር ለአዎንታዊ ሲካፈል ውጤቱ አሉታዊ ይሆናል፡ -(368 ÷ 8) = -46።"
+      },
+      {
+        id: 32, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "Evaluate the division of two negative integers: (-387) ÷ (-9)",
+        options: [
+          { key: "A", text: "-43" },
+          { key: "B", text: "-378" },
+          { key: "C", text: "43" },
+          { key: "D", text: "378" }
+        ],
+        correct: "C",
+        en: "The quotient of two negative integers is always positive: 387 ÷ 9 = 43.",
+        am: "ሁለት አሉታዊ ኢንቲጀሮች ሲካፈሉ ውጤቱ አዎንታዊ ነው፡ (-387) ÷ (-9) = 43።"
+      },
+      {
+        id: 33, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "Express the quotient of -1 ÷ 4 as a decimal:",
+        options: [
+          { key: "A", text: "-0.25" },
+          { key: "B", text: "0.25" },
+          { key: "C", text: "-4.0" },
+          { key: "D", text: "-2.5" }
+        ],
+        correct: "A",
+        en: "-1 ÷ 4 = -(1 ÷ 4) = -0.25.",
+        am: "-1 ለ 4 ሲካፈል በአስርዮሽ ሲገለጽ -0.25 ይሆናል።"
+      },
+      {
+        id: 34, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "What is the result when any non-zero integer is divided by zero, such as 768 ÷ 0?",
+        options: [
+          { key: "A", text: "0" },
+          { key: "B", text: "Undefined (Not defined)" },
+          { key: "C", text: "768" },
+          { key: "D", text: "1" }
+        ],
+        correct: "B",
+        en: "Division by zero is not defined in mathematics (a/0 is undefined).",
+        am: "ማንኛውንም ቁጥር ለዜሮ ማካፈል በሂሳብ ህግ አልተተረጎመም (Undefined ነው)።"
+      },
+      {
+        id: 35, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "What is the result of 0 ÷ (-4965)?",
+        options: [
+          { key: "A", text: "-4965" },
+          { key: "B", text: "Undefined" },
+          { key: "C", text: "0" },
+          { key: "D", text: "1" }
+        ],
+        correct: "C",
+        en: "Zero divided by any non-zero integer is always 0: 0 ÷ a = 0 (where a ≠ 0).",
+        am: "ዜሮ ለማንኛውም ዜሮ ላልሆነ ቁጥር ሲካፈል ውጤቱ ሁልጊዜ 0 (ዜሮ) ነው።"
+      },
+      {
+        id: 36, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "Which of the following is an even integer?",
+        options: [
+          { key: "A", text: "-23" },
+          { key: "B", text: "345" },
+          { key: "C", text: "-71" },
+          { key: "D", text: "-252" }
+        ],
+        correct: "D",
+        en: "An integer is even if its units digit is 0, 2, 4, 6, or 8. -252 ends in 2 and is divisible by 2 without remainder.",
+        am: "የአንድ ቁጥር የመጨረሻው (አንድ ቤት) አሃዝ 0, 2, 4, 6, ወይም 8 ከሆነ ተጋማሽ (ኢቭን) ነው። ስለዚህ -252 ተጋማሽ ኢንቲጀር ነው።"
+      },
+      {
+        id: 37, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "What is the nature of the sum of two odd integers (Odd + Odd)?",
+        options: [
+          { key: "A", text: "Always even" },
+          { key: "B", text: "Always odd" },
+          { key: "C", text: "Always negative" },
+          { key: "D", text: "Always zero" }
+        ],
+        correct: "A",
+        en: "The sum of any two odd integers is always an even integer (e.g., 3 + 5 = 8; -7 + 11 = 4).",
+        am: "የሁለት ጎዶሎ ቁጥሮች ድምር ሁልጊዜ ተጋማሽ (Even) ይሆናል (ለምሳሌ፡ 3 + 5 = 8)።"
+      },
+      {
+        id: 38, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "What is the nature of the product when an odd integer is multiplied by an even integer (Odd × Even)?",
+        options: [
+          { key: "A", text: "Always odd" },
+          { key: "B", text: "Always prime" },
+          { key: "C", text: "Always fractional" },
+          { key: "D", text: "Always even" }
+        ],
+        correct: "D",
+        en: "Any integer multiplied by an even integer always yields an even product (Odd × Even = Even).",
+        am: "ማንኛውም ጎዶሎ ቁጥር በተጋማሽ ቁጥር ሲባዛ ውጤቱ ሁልጊዜ ተጋማሽ (Even) ይሆናል።"
+      },
+      {
+        id: 39, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "Abel played a two-round game. In the first round he lost 30 points (-30). In the second round he gained 13 points (+13). What was his net total score?",
+        options: [
+          { key: "A", text: "-43" },
+          { key: "B", text: "17" },
+          { key: "C", text: "-17" },
+          { key: "D", text: "43" }
+        ],
+        correct: "C",
+        en: "Net score = -30 + 13 = -(30 - 13) = -17 points.",
+        am: "አጠቃላይ ውጤት = -30 + 13 = -17 ነጥብ ይሆናል።"
+      },
+      {
+        id: 40, type: "mcq", part: "Part I: Multiple Choice",
+        stem: "What is the constant difference between any two consecutive even integers?",
+        options: [
+          { key: "A", text: "1" },
+          { key: "B", text: "2" },
+          { key: "C", text: "0" },
+          { key: "D", text: "4" }
+        ],
+        correct: "B",
+        en: "Consecutive even integers increase by 2 (e.g., 4 - 2 = 2; -2 - (-4) = 2).",
+        am: "ተከታታይ ተጋማሽ ቁጥሮች በ 2 ልዩነት ይጨምራሉ (ለምሳሌ፡ 4 - 2 = 2)።"
+      },
+
+      // PART II: WORD BANK MATCH (41-45)
+      {
+        id: 41, type: "wordbank", part: "Part II: Word Bank Matching",
+        wordBank: ["successor", "undefined", "opposite", "quotient", "even"],
+        stem: "Two numbers that are at the exact same distance from zero in opposite directions on a number line are called _________________ numbers.",
+        correct: "opposite",
+        en: "By definition, opposite numbers (additive inverses) are numbers that share the same distance from zero in opposite directions on a number line.",
+        am: "በቁጥር መስመር ላይ ከዜሮ እኩል ርቀት ላይ በተቃራኒ አቅጣጫ የሚገኙ ቁጥሮች ተቃራኒ (Opposite) ቁጥሮች ይባላሉ።"
+      },
+      {
+        id: 42, type: "wordbank", part: "Part II: Word Bank Matching",
+        wordBank: ["successor", "undefined", "opposite", "quotient", "even"],
+        stem: "The integer that comes immediately after a given integer on the number line is called its _________________.",
+        correct: "successor",
+        en: "The integer that comes immediately after a given number is called its successor (obtained by adding 1).",
+        am: "ከተሰጠው ኢንቲጀር ቀጥሎ የሚመጣው ቁጥር ተከታይ (Successor) ይባላል።"
+      },
+      {
+        id: 43, type: "wordbank", part: "Part II: Word Bank Matching",
+        wordBank: ["successor", "undefined", "opposite", "quotient", "even"],
+        stem: "In any integer division problem a ÷ b = c, the final result c is called the _________________.",
+        correct: "quotient",
+        en: "In a ÷ b = c, 'a' is the dividend, 'b' is the divisor, and the resulting answer 'c' is the quotient.",
+        am: "በማካፈል ስሌት a ÷ b = c ውስጥ፡ a ተካፋይ (dividend)፣ b አካፋይ (divisor)፣ c ደግሞ ድርሻ (Quotient) ይባላል።"
+      },
+      {
+        id: 44, type: "wordbank", part: "Part II: Word Bank Matching",
+        wordBank: ["successor", "undefined", "opposite", "quotient", "even"],
+        stem: "Dividing any non-zero integer by zero (such as a ÷ 0) is mathematically _________________.",
+        correct: "undefined",
+        en: "Division by zero has no valid numeric meaning in arithmetic; it is defined as undefined.",
+        am: "ለዜሮ ማካፈል በሂሳብ አልተተረጎመም (Undefined ነው)።"
+      },
+      {
+        id: 45, type: "wordbank", part: "Part II: Word Bank Matching",
+        wordBank: ["successor", "undefined", "opposite", "quotient", "even"],
+        stem: "The sum of any two odd integers is always an _________________ integer.",
+        correct: "even",
+        en: "Odd + Odd is algebraically represented as (2k+1) + (2m+1) = 2(k+m+1), which is always an even integer.",
+        am: "የሁለት ጎዶሎ ቁጥሮች ድምር ሁልጊዜ ተጋማሽ (Even) ኢንቲጀር ነው።"
+      },
+
+      // PART III: TRUE / FALSE (46-50)
+      {
+        id: 46, type: "tf", part: "Part III: True or False",
+        stem: "Every natural number is a whole number, but not all whole numbers are natural numbers.",
+        options: [
+          { key: "True", text: "True" },
+          { key: "False", text: "False" }
+        ],
+        correct: "True",
+        en: "True. ℕ = {1, 2, 3, ...} and 𝕎 = {0, 1, 2, 3, ...}. 0 is in 𝕎 but not in ℕ, so ℕ ⊂ 𝕎.",
+        am: "እውነት (True)። ሁሉም የተፈጥሮ ቁጥሮች የሙሉ ቁጥር አካል ናቸው፣ ነገር ግን 0 ሙሉ ቁጥር ሆኖ የተፈጥሮ ቁጥር አይደለም።"
+      },
+      {
+        id: 47, type: "tf", part: "Part III: True or False",
+        stem: "Decimals and common fractions are members of the set of integers (ℤ).",
+        options: [
+          { key: "True", text: "True" },
+          { key: "False", text: "False" }
+        ],
+        correct: "False",
+        en: "False. The set of integers consists strictly of whole numbers and negative whole numbers. Fractions and decimals are excluded.",
+        am: "ሐሰት (False)። ኢንቲጀሮች ክፍልፋዮችንና አስርዮሾችን አያካትቱም፤ ሙሉ ቁጥሮችንና አሉታዊ አቻዎቻቸውን ብቻ ይይዛሉ።"
+      },
+      {
+        id: 48, type: "tf", part: "Part III: True or False",
+        stem: "The product of an even number of negative factors is always positive.",
+        options: [
+          { key: "True", text: "True" },
+          { key: "False", text: "False" }
+        ],
+        correct: "True",
+        en: "True. Negative factors cancel out in pairs of two (- × - = +), so an even number of negative factors always produces a positive result.",
+        am: "እውነት (True)። ተጋማሽ ቁጥር ያላቸው አሉታዊ ተባዢዎች ሲባዙ ጥንድ ጥንድ ሆነው አዎንታዊ ስለሚሰጡ ውጤቱ ሁልጊዜ አዎንታዊ ነው።"
+      },
+      {
+        id: 49, type: "tf", part: "Part III: True or False",
+        stem: "Subtraction of integers is commutative (that is, a - b = b - a for all integers).",
+        options: [
+          { key: "True", text: "True" },
+          { key: "False", text: "False" }
+        ],
+        correct: "False",
+        en: "False. Subtraction is not commutative. For example, 5 - 2 = 3, whereas 2 - 5 = -3. Since 3 ≠ -3, a - b ≠ b - a.",
+        am: "ሐሰት (False)። መቀነስ የመቀያየር (Commutative) ባህሪ የለውም፤ ለምሳሌ 5 - 2 = 3 ሲሆን 2 - 5 = -3 ነው።"
+      },
+      {
+        id: 50, type: "tf", part: "Part III: True or False",
+        stem: "Zero (0) is an even integer that is neither positive nor negative.",
+        options: [
+          { key: "True", text: "True" },
+          { key: "False", text: "False" }
+        ],
+        correct: "True",
+        en: "True. 0 is divisible by 2 with remainder 0, so it is mathematically even, and it is the origin on the number line—neither positive nor negative.",
+        am: "እውነት (True)። ዜሮ ለ 2 ያለቀሪ ስለሚካፈል ተጋማሽ (ኢቭን) ነው፤ እንዲሁም አዎንታዊም ሆነ አሉታዊ ያልሆነ ገለልተኛ ቁጥር ነው።"
+      }
+    ];
+
+    /* Global Application State */
+    let currentIndex = 0;
+    let studentResponses = {}; // questionId: { selected: string, isCorrect: boolean, locked: boolean }
+    let studentInfo = { name: "", id: "", section: "" };
+    let narratorActive = true;
+    let britishVoice = null;
+
+    /* Speech Synthesis / Voice Initialization */
+    function initVoices() {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.onvoiceschanged = () => {
+          const voices = window.speechSynthesis.getVoices();
+          // Look for British English female voices (Google UK English Female, Victoria, Hazel, Serena, Libby, etc.)
+          britishVoice = voices.find(v => v.lang.includes('en-GB') && (v.name.toLowerCase().includes('female') || v.name.toLowerCase().includes('hazel') || v.name.toLowerCase().includes('serena') || v.name.toLowerCase().includes('libby') || v.name.toLowerCase().includes('victoria'))) 
+                       || voices.find(v => v.lang === 'en-GB') 
+                       || voices.find(v => v.lang.startsWith('en'));
+        };
+      }
+    }
+    initVoices();
+
+    function speakText(text) {
+      if (!narratorActive || !('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      if (britishVoice) {
+        utterance.voice = britishVoice;
+      }
+      utterance.pitch = 1.05;
+      utterance.rate = 0.95;
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function toggleNarrator() {
+      narratorActive = !narratorActive;
+      const label = document.getElementById('speakerLabel');
+      const icon = document.getElementById('speakerIcon');
+      if (narratorActive) {
+        label.textContent = "Narrator: ON (British)";
+        icon.classList.remove('text-slate-400');
+        icon.classList.add('text-amber-300');
+        speakText("Narration is now activated.");
+      } else {
+        label.textContent = "Narrator: OFF";
+        icon.classList.remove('text-amber-300');
+        icon.classList.add('text-slate-400');
+        window.speechSynthesis.cancel();
+      }
+    }
+
+    function readCurrentQuestionSpeech() {
+      const q = quizData[currentIndex];
+      let narrationText = `Question ${q.id}. ${q.stem}. `;
+      if (q.type === 'mcq' || q.type === 'tf') {
+        q.options.forEach(opt => {
+          narrationText += `Option ${opt.key}: ${opt.text}. `;
+        });
+      } else if (q.type === 'wordbank') {
+        narrationText += `Select from the word bank choices: ${q.wordBank.join(', ')}.`;
+      }
+      speakText(narrationText);
+    }
+
+    /* Start Assessment */
+    function startQuiz() {
+      const name = document.getElementById('studentName').value.trim();
+      const id = document.getElementById('studentId').value.trim();
+      const section = document.getElementById('studentSection').value.trim();
+
+      if (!name || !id) {
+        document.getElementById('regError').classList.remove('hidden');
+        return;
+      }
+
+      studentInfo = { name, id, section: section || "N/A" };
+      document.getElementById('studentDisplay').textContent = `Student: ${name} (${id})`;
+
+      document.getElementById('welcomeScreen').classList.add('hidden');
+      document.getElementById('quizScreen').classList.remove('hidden');
+      document.getElementById('quizScreen').classList.add('flex');
+
+      buildQuestionGrid();
+      renderQuestion(0);
+      speakText(`Welcome ${name}. Starting the Grade 7 Mathematics Integers assessment.`);
+    }
+
+    /* Build Question Grid Navigation */
+    function buildQuestionGrid() {
+      const container = document.getElementById('questionGrid');
+      container.innerHTML = '';
+      quizData.forEach((q, idx) => {
+        const btn = document.createElement('button');
+        btn.id = `grid-btn-${q.id}`;
+        btn.textContent = q.id;
+        btn.onclick = () => renderQuestion(idx);
+        btn.className = `w-7 h-7 text-[11px] font-bold rounded-md flex items-center justify-center transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-300`;
+        container.appendChild(btn);
+      });
+    }
+
+    function updateQuestionGrid() {
+      quizData.forEach((q, idx) => {
+        const btn = document.getElementById(`grid-btn-${q.id}`);
+        if (!btn) return;
+
+        const resp = studentResponses[q.id];
+        btn.className = "w-7 h-7 text-[11px] font-bold rounded-md flex items-center justify-center transition-all ";
+
+        if (idx === currentIndex) {
+          btn.className += "ring-2 ring-sky-500 scale-105 ";
+        }
+
+        if (resp && resp.locked) {
+          if (resp.isCorrect) {
+            btn.className += "bg-emerald-600 text-white border border-emerald-700";
+          } else {
+            btn.className += "bg-rose-600 text-white border border-rose-700";
+          }
+        } else {
+          btn.className += "bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-300";
+        }
+      });
+    }
+
+    /* Render Active Question */
+    function renderQuestion(index) {
+      if (index < 0 || index >= quizData.length) return;
+      currentIndex = index;
+      const q = quizData[index];
+
+      // Update Top Status
+      document.getElementById('currentQNum').textContent = q.id;
+      document.getElementById('badgeSection').textContent = q.type === 'mcq' ? 'MCQ' : (q.type === 'wordbank' ? 'MATCH' : 'T / F');
+      document.getElementById('partTitleTag').textContent = q.part;
+      document.getElementById('questionStem').textContent = `${q.id}. ${q.stem}`;
+
+      // Update progress
+      const answeredCount = Object.keys(studentResponses).filter(k => studentResponses[k].locked).length;
+      const pct = Math.round((answeredCount / quizData.length) * 100);
+      document.getElementById('progressPercent').textContent = `${pct}%`;
+      document.getElementById('progressBar').style.width = `${pct}%`;
+
+      // Render Options Container
+      const optContainer = document.getElementById('optionsContainer');
+      optContainer.innerHTML = '';
+
+      const resp = studentResponses[q.id];
+      const isLocked = resp && resp.locked;
+
+      if (q.type === 'mcq' || q.type === 'tf') {
+        q.options.forEach(opt => {
+          const optBtn = document.createElement('button');
+          optBtn.className = getOptionButtonClass(q, opt.key, isLocked, resp);
+          optBtn.disabled = isLocked;
+          optBtn.onclick = () => handleAnswerSelect(q.id, opt.key);
+
+          optBtn.innerHTML = `
+            <div class="flex items-center space-x-3 w-full text-left">
+              <span class="w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs uppercase border ${getOptionBadgeClass(q, opt.key, isLocked, resp)}">
+                ${opt.key}
+              </span>
+              <span class="text-xs md:text-sm font-medium flex-1">${opt.text}</span>
+              ${getOptionStatusIcon(q, opt.key, isLocked, resp)}
+            </div>
+          `;
+          optContainer.appendChild(optBtn);
+        });
+      } else if (q.type === 'wordbank') {
+        // Render word bank buttons
+        const wbHeader = document.createElement('div');
+        wbHeader.className = "bg-amber-50 border border-amber-200 text-amber-900 rounded-lg p-2.5 text-xs font-semibold mb-2";
+        wbHeader.innerHTML = `Word Bank Choices (Click the correct term):`;
+        optContainer.appendChild(wbHeader);
+
+        const grid = document.createElement('div');
+        grid.className = "grid grid-cols-2 sm:grid-cols-3 gap-2";
+
+        q.wordBank.forEach(word => {
+          const wordBtn = document.createElement('button');
+          wordBtn.disabled = isLocked;
+          wordBtn.onclick = () => handleAnswerSelect(q.id, word);
+          wordBtn.className = getWordBankButtonClass(q, word, isLocked, resp);
+          wordBtn.innerHTML = `
+            <span class="font-bold font-mono text-xs md:text-sm capitalize">${word}</span>
+          `;
+          grid.appendChild(wordBtn);
+        });
+        optContainer.appendChild(grid);
+      }
+
+      // Feedback Box Rendering
+      const feedbackBox = document.getElementById('feedbackBox');
+      if (isLocked) {
+        feedbackBox.classList.remove('hidden');
+        renderFeedbackContent(q, resp);
+      } else {
+        feedbackBox.classList.add('hidden');
+      }
+
+      // Update Navigation Buttons state
+      document.getElementById('prevBtn').disabled = currentIndex === 0;
+      document.getElementById('nextBtn').classList.toggle('hidden', currentIndex === quizData.length - 1);
+      document.getElementById('skipBtn').classList.toggle('hidden', currentIndex === quizData.length - 1);
+      document.getElementById('submitExamBtn').classList.toggle('hidden', currentIndex !== quizData.length - 1 && answeredCount < quizData.length);
+
+      updateQuestionGrid();
+    }
+
+    /* Option Button Class Resolvers for Instant Feedback Highlighting */
+    function getOptionButtonClass(q, key, isLocked, resp) {
+      let base = "w-full p-3 rounded-xl border text-left transition-all flex items-center justify-between ";
+      if (!isLocked) {
+        return base + "bg-white hover:bg-sky-50 border-slate-200 hover:border-sky-300 text-slate-800 shadow-xs cursor-pointer";
+      }
+      // Locked state: Highlight correct in emerald, selected wrong in rose
+      if (key === q.correct) {
+        return base + "bg-emerald-50 border-2 border-emerald-500 text-emerald-950 font-semibold shadow-sm";
+      }
+      if (resp && resp.selected === key && !resp.isCorrect) {
+        return base + "bg-rose-50 border-2 border-rose-500 text-rose-950 font-semibold shadow-sm";
+      }
+      return base + "bg-slate-50 border-slate-200 text-slate-400 opacity-60 cursor-not-allowed";
+    }
+
+    function getOptionBadgeClass(q, key, isLocked, resp) {
+      if (!isLocked) {
+        return "bg-slate-100 text-slate-700 border-slate-300";
+      }
+      if (key === q.correct) {
+        return "bg-emerald-600 text-white border-emerald-700";
+      }
+      if (resp && resp.selected === key && !resp.isCorrect) {
+        return "bg-rose-600 text-white border-rose-700";
+      }
+      return "bg-slate-100 text-slate-400 border-slate-200";
+    }
+
+    function getOptionStatusIcon(q, key, isLocked, resp) {
+      if (!isLocked) return '';
+      if (key === q.correct) {
+        return `<span class="text-emerald-700 flex items-center font-bold text-xs"><svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Correct</span>`;
+      }
+      if (resp && resp.selected === key && !resp.isCorrect) {
+        return `<span class="text-rose-700 flex items-center font-bold text-xs"><svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg> Your Choice</span>`;
+      }
+      return '';
+    }
+
+    function getWordBankButtonClass(q, word, isLocked, resp) {
+      let base = "p-3 rounded-xl border text-center transition-all ";
+      if (!isLocked) {
+        return base + "bg-white hover:bg-sky-50 border-slate-300 hover:border-sky-400 text-slate-800 shadow-xs cursor-pointer";
+      }
+      if (word.toLowerCase() === q.correct.toLowerCase()) {
+        return base + "bg-emerald-100 border-2 border-emerald-600 text-emerald-900 font-bold";
+      }
+      if (resp && resp.selected.toLowerCase() === word.toLowerCase() && !resp.isCorrect) {
+        return base + "bg-rose-100 border-2 border-rose-500 text-rose-900 font-bold";
+      }
+      return base + "bg-slate-100 border-slate-200 text-slate-400 opacity-60 cursor-not-allowed";
+    }
+
+    /* Handle Irreversible Answer Selection */
+    function handleAnswerSelect(questionId, selectedKey) {
+      if (studentResponses[questionId] && studentResponses[questionId].locked) return; // Prevent changing
+
+      const q = quizData.find(item => item.id === questionId);
+      const isCorrect = (String(selectedKey).trim().toLowerCase() === String(q.correct).trim().toLowerCase());
+
+      studentResponses[questionId] = {
+        selected: selectedKey,
+        isCorrect: isCorrect,
+        locked: true
+      };
+
+      // Recalculate Live Score
+      let score = 0;
+      Object.keys(studentResponses).forEach(k => {
+        if (studentResponses[k].isCorrect) score++;
+      });
+      document.getElementById('liveScore').textContent = score;
+
+      // Provide Audio Narration Feedback
+      if (isCorrect) {
+        speakText("Brilliant! That is completely correct.");
+      } else {
+        speakText(`Incorrect. The correct answer is ${q.correct}.`);
+      }
+
+      // Re-render to show locked highlighting & explanations
+      renderQuestion(currentIndex);
+    }
+
+    /* Render Feedback Box */
+    function renderFeedbackContent(q, resp) {
+      const box = document.getElementById('feedbackBox');
+      const title = document.getElementById('feedbackResultTitle');
+      const pts = document.getElementById('feedbackPoints');
+      const en = document.getElementById('explanationEn');
+      const am = document.getElementById('explanationAm');
+
+      if (resp.isCorrect) {
+        box.className = "rounded-xl p-4 md:p-5 border bg-emerald-50/90 border-emerald-300 text-emerald-900";
+        title.innerHTML = `
+          <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+          <span class="text-sm font-extrabold text-emerald-800">Correct! Well Done.</span>
+        `;
+        pts.className = "px-2 py-0.5 rounded text-xs bg-emerald-200 text-emerald-900 font-bold";
+        pts.textContent = "+1.0 Mark";
+      } else {
+        box.className = "rounded-xl p-4 md:p-5 border bg-rose-50/90 border-rose-300 text-rose-900";
+        title.innerHTML = `
+          <svg class="w-5 h-5 text-rose-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
+          <span class="text-sm font-extrabold text-rose-800">Incorrect. Key Answer: <span class="underline">${q.correct}</span></span>
+        `;
+        pts.className = "px-2 py-0.5 rounded text-xs bg-rose-200 text-rose-900 font-bold";
+        pts.textContent = "0.0 Mark";
+      }
+
+      en.textContent = q.en;
+      am.textContent = q.am;
+    }
+
+    /* Navigation Handlers */
+    function navigateNext() {
+      if (currentIndex < quizData.length - 1) {
+        renderQuestion(currentIndex + 1);
+      }
+    }
+
+    function navigatePrev() {
+      if (currentIndex > 0) {
+        renderQuestion(currentIndex - 1);
+      }
+    }
+
+    /* Exam Final Submission */
+    function confirmSubmitExam() {
+      const answeredCount = Object.keys(studentResponses).filter(k => studentResponses[k].locked).length;
+      if (answeredCount < quizData.length) {
+        const remaining = quizData.length - answeredCount;
+        const confirmBox = document.createElement('div');
+        // Custom modal instead of window.confirm
+        showModal(
+          "Submit Examination?",
+          `You have ${remaining} unanswered question(s). Are you sure you want to finalize and auto-grade your exam now?`,
+          () => processFinalSubmission()
+        );
+        return;
+      }
+      processFinalSubmission();
+    }
+
+    function processFinalSubmission() {
+      // Calculate scores
+      let score = 0;
+      quizData.forEach(q => {
+        const resp = studentResponses[q.id];
+        if (resp && resp.isCorrect) score++;
+      });
+
+      const percentage = ((score / quizData.length) * 100).toFixed(1);
+
+      // Populate Results UI
+      document.getElementById('resStudentTitle').textContent = studentInfo.name;
+      document.getElementById('resStudentSub').textContent = `Student ID: ${studentInfo.id} | Section: ${studentInfo.section} | Date: ${new Date().toLocaleDateString()}`;
+      document.getElementById('resScoreNum').textContent = `${score} / ${quizData.length}`;
+      document.getElementById('resPercent').textContent = `${percentage}%`;
+      document.getElementById('resCorrectCount').textContent = score;
+
+      let proficiency = "Exemplary (Distinction)";
+      if (percentage < 50) proficiency = "Needs Remediation";
+      else if (percentage < 75) proficiency = "Proficient";
+      else if (percentage < 90) proficiency = "Advanced";
+      document.getElementById('resProficiency').textContent = proficiency;
+
+      // Populate Audit Ledger
+      const auditTbody = document.getElementById('auditTableBody');
+      auditTbody.innerHTML = '';
+      quizData.forEach(q => {
+        const resp = studentResponses[q.id];
+        const userAns = resp ? resp.selected : "Unanswered";
+        const isCorr = resp ? resp.isCorrect : false;
+
+        const tr = document.createElement('tr');
+        tr.className = isCorr ? "hover:bg-emerald-50/40" : "hover:bg-rose-50/40";
+        tr.innerHTML = `
+          <td class="p-2.5 text-center font-bold">${q.id}</td>
+          <td class="p-2.5 text-[11px] text-slate-500">${q.type.toUpperCase()}</td>
+          <td class="p-2.5 font-medium text-slate-800">${q.stem.substring(0, 75)}...</td>
+          <td class="p-2.5 text-center font-mono font-bold ${isCorr ? 'text-emerald-700' : 'text-rose-600'}">${userAns}</td>
+          <td class="p-2.5 text-center font-mono font-bold text-sky-800">${q.correct}</td>
+          <td class="p-2.5 text-center">
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-extrabold ${isCorr ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'}">
+              ${isCorr ? 'Correct' : 'Incorrect'}
+            </span>
+          </td>
+        `;
+        auditTbody.appendChild(tr);
+      });
+
+      // Switch screen
+      document.getElementById('quizScreen').classList.add('hidden');
+      document.getElementById('quizScreen').classList.remove('flex');
+      document.getElementById('resultsScreen').classList.remove('hidden');
+      document.getElementById('resultsScreen').classList.add('flex');
+
+      speakText(`Congratulations ${studentInfo.name}. You have completed the assessment with a score of ${score} out of 50.`);
+    }
+
+    /* Email Submission to Teacher (mesayferedegn2@gmail.com) */
+    function sendScoreEmail() {
+      const teacherEmail = "mesayferedegn2@gmail.com";
+      const score = Object.keys(studentResponses).filter(k => studentResponses[k].isCorrect).length;
+      const pct = ((score / quizData.length) * 100).toFixed(1);
+
+      const subject = encodeURIComponent(`Grade 7 Math Unit 2 Exam Submission: ${studentInfo.name} (ID: ${studentInfo.id})`);
+      
+      let itemSummary = "";
+      quizData.forEach(q => {
+        const r = studentResponses[q.id];
+        const status = r ? (r.isCorrect ? "PASS" : "FAIL") : "OMITTED";
+        const ans = r ? r.selected : "NONE";
+        itemSummary += `Q${q.id}: Ans=[${ans}], Key=[${q.correct}], Result=[${status}]\n`;
+      });
+
+      const bodyText = encodeURIComponent(
+`DEAR TEACHER MESAY,
+
+Here is the official examination submission from Grade 7 Mathematics (Unit 2: Integers).
+
+STUDENT DETAILS:
+------------------------------------------
+Student Name: ${studentInfo.name}
+Student ID / Roll No: ${studentInfo.id}
+Section: ${studentInfo.section}
+Submission Date: ${new Date().toLocaleString()}
+
+ASSESSMENT PERFORMANCE:
+------------------------------------------
+Final Score: ${score} / ${quizData.length}
+Percentage: ${pct}%
+Mastery Level: ${pct >= 75 ? 'Proficient / Advanced' : 'Needs Reinforcement'}
+
+FULL ITEMIZED AUDIT LEDGER:
+------------------------------------------
+${itemSummary}
+==========================================
+Sent via Ethiopian Grade 7 Math Interactive Assessment System.
+`
+      );
+
+      const mailtoUrl = `mailto:${teacherEmail}?subject=${subject}&body=${bodyText}`;
+      window.location.href = mailtoUrl;
+    }
+
+    /* Clipboard Copy Feature */
+    function copyScoreReport() {
+      const score = Object.keys(studentResponses).filter(k => studentResponses[k].isCorrect).length;
+      const pct = ((score / quizData.length) * 100).toFixed(1);
+
+      const report = 
+`GRADE 7 MATHEMATICS - UNIT 2 EXAM REPORT
+Student: ${studentInfo.name} | ID: ${studentInfo.id} | Section: ${studentInfo.section}
+Date: ${new Date().toLocaleDateString()}
+Score: ${score} / 50 (${pct}%)
+Teacher Email: mesayferedegn2@gmail.com`;
+
+      const dummy = document.createElement("textarea");
+      document.body.appendChild(dummy);
+      dummy.value = report;
+      dummy.select();
+      document.execCommand("copy");
+      document.body.removeChild(dummy);
+
+      const btnText = document.getElementById('copyBtnText');
+      btnText.textContent = "Copied to Clipboard!";
+      setTimeout(() => {
+        btnText.textContent = "Copy Report Text";
+      }, 2500);
+    }
+
+    function reviewAllAnswers() {
+      document.getElementById('resultsScreen').classList.add('hidden');
+      document.getElementById('resultsScreen').classList.remove('flex');
+      document.getElementById('quizScreen').classList.remove('hidden');
+      document.getElementById('quizScreen').classList.add('flex');
+      renderQuestion(0);
+    }
+
+    /* Custom Non-blocking Modal */
+    function showModal(title, msg, onConfirm) {
+      const modalBackdrop = document.createElement('div');
+      modalBackdrop.className = "fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4";
+      modalBackdrop.id = "customModal";
+
+      modalBackdrop.innerHTML = `
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-slate-200 space-y-4 animate-in fade-in zoom-in-95">
+          <h3 class="text-lg font-bold text-slate-900">${title}</h3>
+          <p class="text-xs md:text-sm text-slate-600 leading-relaxed">${msg}</p>
+          <div class="flex items-center justify-end space-x-2 pt-2">
+            <button id="modalCancelBtn" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs rounded-lg transition-all">Continue Test</button>
+            <button id="modalConfirmBtn" class="px-4 py-2 bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs rounded-lg transition-all">Submit Anyway</button>
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(modalBackdrop);
+
+      document.getElementById('modalCancelBtn').onclick = () => {
+        document.body.removeChild(modalBackdrop);
+      };
+
+      document.getElementById('modalConfirmBtn').onclick = () => {
+        document.body.removeChild(modalBackdrop);
+        if (onConfirm) onConfirm();
+      };
+    }
+  </script>
+</body>
+</html>
